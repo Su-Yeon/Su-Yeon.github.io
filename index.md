@@ -35,3 +35,43 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+
+# 웹뷰 API 정리
+## 웹 -> 앱
+1. http request 요청
+ * request(url, method)
+ * request(url, method, paramJSON)
+ * request(url, method, paramJSON, headerJSON)
+
+2. 파일로그 남기기
+ * writeLog(text)
+
+3. 기본이미지 보이기
+ * showDefaultImage()
+4. 기본이미지 숨기기
+ * hideDefaultImage()
+
+5. 미디어 목록 요청
+ * requestMediaList()
+6. 미디어 이름으로 재생 요청(파일명은 미디어 목록에서 orgfile명)
+ * playMedia(int w, int h, int x, int y, String orgFile, boolean repeat)
+7. 미디어 번호로 재생 요청
+ * playMedia(int w, int h, int x, int y, int idx, boolean repeat)
+8. 전체 미디어 재생 요청
+ * playMediaAll(int w, int h, int x, int y, boolean repeat)
+9. 미디어 중지
+ * stopMedia()
+10. 앱에 데이터 저장
+ * saveData(String key, String value)
+11. 앱 데이터 가져오기
+ * getSavedData(String key)
+
+## 앱 -> 웹
+http request 결과
+onAndroidHttpResult(JSONObject)
+미디어 목록 요청 결과
+onMediaListResult(JSONArray)
+미디어 재생 완료
+onPlayComplete(orgFile)
