@@ -41,10 +41,11 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 # 웹뷰 API 정리
 ## 웹 -> 앱
 1. http request 요청
+```
  * request(url, method)
  * request(url, method, paramJSON)
  * request(url, method, paramJSON, headerJSON)
-
+```
 2. 파일로그 남기기
  * writeLog(text)
 
